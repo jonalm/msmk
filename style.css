@@ -112,8 +112,6 @@ h1 {
   object-fit: cover;
 }
 
-/* Caption is hidden until hover, then fades in as a yellow panel
-   with the title centered over the image. */
 .work .caption {
   position: absolute;
   inset: 0;
