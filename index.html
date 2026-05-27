@@ -10,15 +10,21 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="wrap">
+  <div class="wrap wrap--wide">
     <header>
       <nav class="nav">
         <a href="index.html" class="logo">
           <img src="assets/main_logo_bw.png" alt="" class="logo-mark" />
           <span class="logo-text">Marienlyst<br />Skoles<br />Musikkorps</span>
         </a>
-        <div class="nav-links">
+        <button class="nav-toggle" aria-label="Meny" aria-controls="nav-links" aria-expanded="false">
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+        </button>
+        <div class="nav-links" id="nav-links">
           <a href="bli_med.html">Bli med</a>
+          <a href="loppemarked.html">Loppemarked</a>
           <a href="om_oss.html">Om oss</a>
         </div>
       </nav>
@@ -35,8 +41,30 @@
           <img src="assets/hero_bg1.png" alt="17. mai" />
           <figcaption class="caption">17. mai</figcaption>
         </figure>
+
+        <figure class="work video" style="margin:0;">
+          <iframe
+            src="https://www.youtube-nocookie.com/embed/e8KeN7Cq8y0"
+            title="Marienlyst Skoles Musikkorps"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            loading="lazy"
+            allowfullscreen
+          ></iframe>
+        </figure>
+
+        <figure class="work tall" style="margin:0;">
+          <img src="assets/oppstilling.jpeg" alt="Oppstilling" />
+          <figcaption class="caption">Oppstilling</figcaption>
+        </figure>
+
+        <figure class="work tall" style="margin:0;">
+          <img src="assets/barnetog.jpeg" alt="Barnetog" />
+          <figcaption class="caption">Barnetog</figcaption>
+        </figure>
       </div>
     </main>
   </div>
+  <script src="nav.js" defer></script>
 </body>
 </html>
