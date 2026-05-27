@@ -69,7 +69,7 @@ header {
 }
 
 .nav-links a {
-  color: var(--muted);
+  color: #555555;
   text-decoration: none;
   font-size: 16px;
   transition: color 0.15s ease;
@@ -169,35 +169,39 @@ h1 {
 
 .bio a {
   color: var(--ink);
-  text-decoration: underline;
-  text-decoration-color: #cdcdcd;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 3px;
-  transition: text-decoration-color 0.15s ease;
+  text-decoration: none;
+  background: rgba(167, 199, 231, 0.35);
+  padding: 0 4px;
+  border-radius: 3px;
+  transition: background 0.15s ease;
 }
 
 .bio a:hover {
-  text-decoration-color: var(--ink);
+  background: rgba(167, 199, 231, 0.75);
 }
 
-/* Conductors list — minimal hanging dash instead of default bullets */
-.people {
+/* Hanging-dash lists (conductors, instruments) — minimal dash instead of default bullets */
+.people,
+.instruments {
   list-style: none;
   margin: 4px 0 0;
   padding: 0;
 }
 
-.people li {
+.people li,
+.instruments li {
   position: relative;
   padding-left: 22px;
   max-width: 54ch;
 }
 
-.people li + li {
+.people li + li,
+.instruments li + li {
   margin-top: 10px;
 }
 
-.people li::before {
+.people li::before,
+.instruments li::before {
   content: "";
   position: absolute;
   left: 0;
@@ -249,17 +253,24 @@ h1 {
 
 .social a {
   display: inline-flex;
-  color: var(--muted);
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: rgba(167, 199, 231, 0.35);
+  color: var(--ink);
   border-bottom: none;
-  transition: color 0.15s ease;
+  transition: background 0.15s ease;
 }
 
 .social svg {
-  width: 36px;
-  height: 36px;
+  width: 28px;
+  height: 28px;
 }
 
 .social a:hover {
+  background: rgba(167, 199, 231, 0.75);
   color: var(--ink);
   border-bottom: none;
 }
